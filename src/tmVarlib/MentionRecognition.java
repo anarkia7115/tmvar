@@ -866,7 +866,13 @@ public class MentionRecognition
 	                		}
 	                		else
 	                		{
-	                			POS.put(tmp2[q], tmp[1]);
+								try {
+									POS.put(tmp2[q], tmp[1]);
+								} catch (java.lang.ArrayIndexOutOfBoundsException e) {
+									System.out.println(tmp2);
+									System.out.println(q);
+									throw e;
+								}
 	                		}
 	                	}
 	                }
