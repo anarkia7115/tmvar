@@ -1,1 +1,1 @@
-zip -u tmVar.jar tmVarlib/*
+zip -u ../tmVar.jar tmVarlib/*
