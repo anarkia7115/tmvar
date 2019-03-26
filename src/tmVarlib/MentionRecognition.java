@@ -869,8 +869,11 @@ public class MentionRecognition
 								try {
 									POS.put(tmp2[q], tmp[1]);
 								} catch (java.lang.ArrayIndexOutOfBoundsException e) {
-									System.out.println(tmp2);
-									System.out.println(q);
+									System.out.println("tmp2: " + Arrays.toString(tmp2));
+									System.out.println("tmp: " + Arrays.toString(tmp));
+									System.out.println("tag_split: " + Arrays.toString(tag_split));
+
+									System.out.println("q" + q);
 									throw e;
 								}
 	                		}
