@@ -858,8 +858,8 @@ public class MentionRecognition
 	                {
 	                	String tmp[]=tag_split[p].split("_");
 						String tmp2[]=tmp[0].replaceAll("\\s+(?=\\p{Punct})", "").split(regex);
-						System.out.println("tagged: " + tagged);
-						System.out.println("tmp2.length: " + tmp2.length);
+						// System.out.println("tagged: " + tagged);
+						// System.out.println("tmp2.length: " + tmp2.length);
 						
 	                	for(int q=0;q<tmp2.length;q++)
 	                	{
@@ -870,14 +870,15 @@ public class MentionRecognition
 	                		else
 	                		{
 								try {
-									POS.put(tmp2[q], tmp[1]);
+
+									if (tmp.length <=1) {
+										POS.put(tmp2[q], tmp[1]);
+									}
 								} catch (java.lang.ArrayIndexOutOfBoundsException e) {
 									System.out.println("tmp2: " + Arrays.toString(tmp2));
 									System.out.println("tmp: " + Arrays.toString(tmp));
 									System.out.println("tag_split: " + Arrays.toString(tag_split));
 									System.out.println("tmp2.length: " + tmp2.length);
-
-
 
 									System.out.println("q: " + q);
 									throw e;
