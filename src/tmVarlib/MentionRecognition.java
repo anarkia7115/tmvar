@@ -874,11 +874,11 @@ public class MentionRecognition
 									System.out.println("tmp2: " + Arrays.toString(tmp2));
 									System.out.println("tmp: " + Arrays.toString(tmp));
 									System.out.println("tag_split: " + Arrays.toString(tag_split));
-									System.out.println("tmp2.length: " + Arrays.toString(tmp2.length));
+									System.out.println("tmp2.length: " + tmp2.length);
 
 
 
-									System.out.println("q" + q);
+									System.out.println("q: " + q);
 									throw e;
 								}
 	                		}
