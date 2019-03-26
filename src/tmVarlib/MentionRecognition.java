@@ -858,7 +858,7 @@ public class MentionRecognition
 	                {
 	                	String tmp[]=tag_split[p].split("_");
 						String tmp2[]=tmp[0].replaceAll("\\s+(?=\\p{Punct})", "").split(regex);
-						System.out.println("tmp2.length: " + Arrays.toString(tmp2.length));
+						System.out.println("tmp2.length: " + tmp2.length);
 						
 	                	for(int q=0;q<tmp2.length;q++)
 	                	{
