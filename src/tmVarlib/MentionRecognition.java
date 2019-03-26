@@ -857,7 +857,9 @@ public class MentionRecognition
 	        		for(int p=0;p<tag_split.length;p++)
 	                {
 	                	String tmp[]=tag_split[p].split("_");
-	                	String tmp2[]=tmp[0].replaceAll("\\s+(?=\\p{Punct})", "").split(regex);
+						String tmp2[]=tmp[0].replaceAll("\\s+(?=\\p{Punct})", "").split(regex);
+						System.out.println("tmp2.length: " + Arrays.toString(tmp2.length));
+						
 	                	for(int q=0;q<tmp2.length;q++)
 	                	{
 	                		if(tmp2[q].matches("[^0-9a-zA-Z]"))
@@ -872,6 +874,9 @@ public class MentionRecognition
 									System.out.println("tmp2: " + Arrays.toString(tmp2));
 									System.out.println("tmp: " + Arrays.toString(tmp));
 									System.out.println("tag_split: " + Arrays.toString(tag_split));
+									System.out.println("tmp2.length: " + Arrays.toString(tmp2.length));
+
+
 
 									System.out.println("q" + q);
 									throw e;
