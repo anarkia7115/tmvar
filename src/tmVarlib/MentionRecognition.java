@@ -871,7 +871,7 @@ public class MentionRecognition
 	                		{
 								try {
 
-									if (tmp.length <=1) {
+									if (tmp.length >1) {
 										POS.put(tmp2[q], tmp[1]);
 									}
 								} catch (java.lang.ArrayIndexOutOfBoundsException e) {
